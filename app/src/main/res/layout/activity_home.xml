@@ -4,32 +4,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fillViewport="true"
     android:background="@drawable/gradient_background"
     tools:context=".HomeActivity">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:layout_marginTop="150dp"
-        android:background="@drawable/shape_bg_login"
+        android:padding="16dp"
         android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:orientation="vertical"
-        android:padding="16dp">
+        android:background="@drawable/shape_bg_login">
 
 
         <GridLayout
+            android:padding="15dp"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_gravity="center_horizontal"
-            android:layout_margin="5dp"
-            android:alignmentMode="alignMargins"
             android:columnCount="2"
-            android:columnOrderPreserved="false"
-            android:rowCount="2">
+            android:rowCount="2"
+        android:columnOrderPreserved="false">
 
             <androidx.cardview.widget.CardView
-                android:layout_width="150dp"
-                android:layout_height="150dp"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
                 android:layout_margin="10dp"
                 app:cardBackgroundColor="@color/cardBkg"
                 app:cardCornerRadius="12dp"
@@ -73,8 +73,8 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:layout_width="150dp"
-                android:layout_height="150dp"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
                 android:layout_margin="10dp"
                 app:cardBackgroundColor="@color/cardBkg"
                 app:cardCornerRadius="12dp"
@@ -103,8 +103,8 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:layout_width="150dp"
-                android:layout_height="150dp"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
                 android:layout_margin="10dp"
                 app:cardBackgroundColor="@color/cardBkg"
                 app:cardCornerRadius="12dp"
@@ -133,8 +133,8 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:layout_width="150dp"
-                android:layout_height="150dp"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
                 android:layout_margin="10dp"
                 app:cardBackgroundColor="@color/cardBkg"
                 app:cardCornerRadius="12dp"
