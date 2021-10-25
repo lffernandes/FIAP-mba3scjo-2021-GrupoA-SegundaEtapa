@@ -9,8 +9,8 @@
     tools:context=".HomeActivity">
 
     <LinearLayout
-        android:layout_marginTop="150dp"
-        android:padding="16dp"
+        android:layout_marginTop="300dp"
+        android:paddingTop="40dp"
         android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -28,51 +28,7 @@
         android:columnOrderPreserved="false">
 
             <androidx.cardview.widget.CardView
-                android:layout_width="140dp"
-                android:layout_height="140dp"
-                android:layout_margin="10dp"
-                app:cardBackgroundColor="@color/cardBkg"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="5dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:layout_width="24dp"
-                            android:layout_height="24dp"
-                            android:layout_marginTop="18dp"
-                            android:src="@drawable/logo" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="20dp"
-                            android:text="Minhas Listas"
-                            android:textColor="@color/colorAccent"
-                            android:textSize="18sp" />
-                    </LinearLayout>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="20dp"
-                        android:text="Minhas Listas"
-                        android:textColor="@color/colorAccent"
-                        android:textSize="18sp" />
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
+                android:id="@+id/card_lista"
                 android:layout_width="140dp"
                 android:layout_height="140dp"
                 android:layout_margin="10dp"
@@ -87,22 +43,23 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
                         android:layout_marginTop="18dp"
-                        android:src="@drawable/logo" />
+                        android:src="@drawable/list_notebook_icon" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="20dp"
-                        android:text="Minhas Listas"
+                        android:text="@string/minha_lista"
                         android:textColor="@color/colorAccent"
                         android:textSize="18sp" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/card_calendario"
                 android:layout_width="140dp"
                 android:layout_height="140dp"
                 android:layout_margin="10dp"
@@ -117,22 +74,23 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
                         android:layout_marginTop="18dp"
-                        android:src="@drawable/logo" />
+                        android:src="@drawable/office_icon" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="20dp"
-                        android:text="Minhas Listas"
+                        android:text="@string/calendario"
                         android:textColor="@color/colorAccent"
                         android:textSize="18sp" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/card_senha"
                 android:layout_width="140dp"
                 android:layout_height="140dp"
                 android:layout_margin="10dp"
@@ -147,16 +105,47 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
                         android:layout_marginTop="18dp"
-                        android:src="@drawable/logo" />
+                        android:src="@drawable/page_security" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="20dp"
-                        android:text="Minhas Listas"
+                        android:text="@string/trocarSenha"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="18sp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_sair"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:layout_margin="10dp"
+                app:cardBackgroundColor="@color/cardBkg"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:layout_marginTop="18dp"
+                        android:src="@drawable/exit_logout_open_out_icon" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="@string/sair"
                         android:textColor="@color/colorAccent"
                         android:textSize="18sp" />
                 </LinearLayout>

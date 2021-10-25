@@ -2,8 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="br.com.fiap.mba3scjo2021_grupoa_listou">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.ACCEPT_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCEPT_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -13,11 +13,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Mba3scjo2021GrupoAListou">
         <activity
+            android:name=".MinhasListas"
+            android:exported="false" />
+        <activity
             android:name=".HomeActivity"
             android:exported="false" />
-
         <activity android:name=".MainActivity" />
-
         <activity
             android:name=".Splash_Screen"
             android:exported="true"

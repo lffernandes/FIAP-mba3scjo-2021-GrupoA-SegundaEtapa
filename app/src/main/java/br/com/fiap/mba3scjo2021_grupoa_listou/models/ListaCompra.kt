@@ -1,8 +1,10 @@
-package br.com.fiap.mba3scjo2021_grupoa_listou
+package br.com.fiap.mba3scjo2021_grupoa_listou.models
 
-import androidx.annotation.StringRes
+import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
+import kotlinx.android.parcel.Parcelize
 
+@Parcelize
 data class ListaCompra (
 
 
@@ -12,4 +14,6 @@ data class ListaCompra (
     @SerializedName("recorrencia") val recorrencia: String,
     @SerializedName("orcamento") val orcamento: String
 
-)
+): Parcelable{
+    constructor() : this( 0, "",false, "", "")
+}
