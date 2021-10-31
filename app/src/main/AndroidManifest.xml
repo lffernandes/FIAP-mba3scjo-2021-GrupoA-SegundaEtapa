@@ -13,6 +13,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Mba3scjo2021GrupoAListou">
         <activity
+            android:name=".ItemActivity"
+            android:exported="false" />
+        <activity
+            android:name=".models.ItemActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ListaActivity"
+            android:exported="false" />
+        <activity
             android:name=".MinhasListas"
             android:exported="false" />
         <activity

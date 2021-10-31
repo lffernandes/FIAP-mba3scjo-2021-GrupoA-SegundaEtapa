@@ -3,9 +3,8 @@ package br.com.fiap.mba3scjo2021_grupoa_listou.Services
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-class RetrofitFactory {
+    object ApiFactory{
 
-    companion object {
         private const val URL: String = "http://localhost:3000/"
         private var retrofit: Retrofit? = null
 
@@ -18,5 +17,7 @@ class RetrofitFactory {
             }
             return retrofit!!
         }
+        fun <T> buildService(service: Class<T>) : T? {
+            return retrofit?.create(service)
+        }
     }
-}

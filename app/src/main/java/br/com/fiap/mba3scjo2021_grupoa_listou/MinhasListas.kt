@@ -1,45 +1,56 @@
 package br.com.fiap.mba3scjo2021_grupoa_listou
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import br.com.fiap.mba3scjo2021_grupoa_listou.Adapter.ListasAdapter
-import br.com.fiap.mba3scjo2021_grupoa_listou.Services.RetrofitFactory
-import br.com.fiap.mba3scjo2021_grupoa_listou.Services.RetrofitService
 import br.com.fiap.mba3scjo2021_grupoa_listou.models.ListaCompra
-import br.com.fiap.mba3scjo2021_grupoa_listou.models.ListasResponse
 import kotlinx.android.synthetic.main.activity_minhas_listas.*
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
-
+import br.com.fiap.mba3scjo2021_grupoa_listou.databinding.ItemListasBinding
 
 class MinhasListas : AppCompatActivity() {
+
+    private lateinit var listasAdapter: ListasAdapter
+    private lateinit var myListas: ArrayList<ListaCompra>
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_minhas_listas)
 
+        myListas = ArrayList<ListaCompra>()
+        listasAdapter = ListasAdapter(myListas)
         rv_compra_list.layoutManager = LinearLayoutManager(this)
-        rv_compra_list.setHasFixedSize(true)
-        getListaData { listas : List<ListaCompra> ->
-            rv_compra_list.adapter = ListasAdapter(listas)
-        }
+        rv_compra_list.adapter = listasAdapter
+/*
+        val recyclerView = findViewById<RecyclerView>(R.id.rv_compra_list)
+
+        val serviceGenerator = ApiFactory.buildService(RetrofitService::class.java)
+        val call = serviceGenerator?.getListas()
+
+        call?.enqueue(object : Callback<MutableList<ListaCompra>>{
+
+            override fun onResponse(call: Call<MutableList<ListaCompra>>, response: Response<MutableList<ListaCompra>>){
+                if(response.isSuccessful){
+                    recyclerView.apply {
+                        layoutManager = LinearLayoutManager(this@MinhasListas)
+                        adapter = ListasAdapter(response.body()!!)
+                    }
+                }*/
     }
 
-    private fun getListaData(callback: (List<ListaCompra>) -> Unit) {
-        val apiService = RetrofitFactory.getInstance().create(RetrofitService::class.java)
-
-        apiService.getListas().enqueue(object : Callback<ListasResponse> {
-            override fun onResponse(
-                call: Call<ListasResponse>,
-                response: Response<ListasResponse>,
-            ) {
-                return callback(response.body()!!.listas)
-            }
-
-            override fun onFailure(call: Call<ListasResponse>, t: Throwable) {
-
+/*
+            override fun onFailure(call: Call<MutableList<ListaCompra>>, t: Throwable) {
+                t.printStackTrace()
+                Log.e("error", t.message.toString())
             }
         })
     }
+
+    private fun showError() {
+        Toast.makeText(this, "Ocorreu um erro", Toast.LENGTH_SHORT).show()
+    }
+}
+
+private fun <T> Call<T>?.enqueue(callback: Callback<MutableList<ListaCompra>>) {*/
+
 }
