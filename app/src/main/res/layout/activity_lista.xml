@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
@@ -8,74 +11,104 @@
             type="br.com.fiap.mba3scjo2021_grupoa_listou.models.ListaCompra" />
     </data>
 
-    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/gradient_background"
+        android:fillViewport="true"
+        android:orientation="vertical"
         tools:context=".ListaActivity">
 
-        <LinearLayout
+
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="100dp"
-            android:background="@drawable/shape_bg_login"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:padding="10dp">
+            android:layout_height="match_parent">
 
-
-            <TextView
-                android:id="@+id/nomeLista"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@{isLista.descricao}"
-                android:textColor="@color/textoListas" />
+                android:layout_height="match_parent"
+                android:layout_marginTop="100dp"
+                android:background="@drawable/shape_bg_login"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="10dp">
 
-            <TextView
-                android:id="@+id/dtCompra"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@{isLista.dtCompra}"
-                android:textColor="@color/textoListas" />
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:elevation="10dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardUseCompatPadding="true"
+                    tools:cardCornerRadius="5dp">
 
-            <TextView
-                android:id="@+id/repetirLista"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@{isLista.isRecorrente}"
-                android:textColor="@color/textoListas" />
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/PeriodoLista"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@{isLista.recorrencia}"
-                android:textColor="@color/textoListas" />
+                        <TextView
+                            android:id="@+id/nomeLista"
+                            android:layout_width="363dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginEnd="341dp"
+                            android:text="@{isLista.descricao}"
+                            android:textColor="@color/textoListas" />
 
-            <TextView
-                android:id="@+id/ttDisponivel"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@{isLista.orcamento}"
-                android:textColor="@color/textoListas" />
+                        <TextView
+                            android:id="@+id/dtCompra"
+                            android:layout_width="363dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="17dp"
+                            android:layout_marginTop="6dp"
+                            android:layout_marginEnd="279dp"
+                            android:text="@{isLista.dtCompra}"
+                            android:textColor="@color/textoListas" />
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rv_item_lista"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                tools:listitem="@layout/item_compra" />
+                        <TextView
+                            android:id="@+id/repetirLista"
+                            android:layout_width="362dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="17dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="333dp"
+                            android:text="@{isLista.isRecorrente}"
+                            android:textColor="@color/textoListas" />
 
-        </LinearLayout>
-        
-        <ImageView
-            android:id="@+id/img_logo"
-            android:layout_width="300dp"
-            android:layout_height="300dp"
-            android:layout_centerInParent="true"
-            android:src="@drawable/list_notebook_icon" />
+                        <TextView
+                            android:id="@+id/periodoLista"
+                            android:layout_width="360dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="19dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="327dp"
+                            android:text="@{isLista.recorrencia}"
+                            android:textColor="@color/textoListas" />
 
-    </ScrollView>
+                        <TextView
+                            android:id="@+id/ttDisponivel"
+                            android:layout_width="361dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="19dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="277dp"
+                            android:text="@{isLista.orcamento}"
+                            android:textColor="@color/textoListas" />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_compra_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    tools:listitem="@layout/item_listas" />
+
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
 </layout>
+

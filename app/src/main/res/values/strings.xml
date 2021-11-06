@@ -9,4 +9,9 @@
     <string name="trocarSenha">Trocar Senha</string>
     <string name="sair">Sair</string>
     <string name="minha_lista">Minha Lista</string>
+    <string name="nome_da_lista">Nome da Lista</string>
+    <string name="data_da_compra">Data da Compra</string>
+    <string name="orcamento">Orçamento</string>
+    <string name="periodo">Período</string>
+    <string name="salvar">SALVAR</string>
 </resources>

@@ -10,31 +10,35 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="true"
         android:theme="@style/Theme.Mba3scjo2021GrupoAListou">
         <activity
-            android:name=".ItemActivity"
-            android:exported="false" />
+        android:name=".NewEditListaActivity"
+        android:exported="true" />
+
         <activity
-            android:name=".models.ItemActivity"
-            android:exported="false" />
+            android:name=".ItemActivity"
+            android:exported="false"
+            android:parentActivityName=".ListaActivity"
+            android:theme="@style/Theme.Mba3scjo2021GrupoAListou_actionBar" />
         <activity
             android:name=".ListaActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".MinhasListas"
+            android:theme="@style/Theme.Mba3scjo2021GrupoAListou_actionBar" />
         <activity
             android:name=".MinhasListas"
-            android:exported="false" />
-        <activity
-            android:name=".HomeActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".HomeActivity"
+            android:theme="@style/Theme.Mba3scjo2021GrupoAListou_actionBar" />
         <activity android:name=".MainActivity" />
         <activity
-            android:name=".Splash_Screen"
-            android:exported="true"
-            android:label="@string/app_name">
+            android:name=".HomeActivity"
+            android:exported="true" />
+
+        <activity android:name=".Splash_Screen"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

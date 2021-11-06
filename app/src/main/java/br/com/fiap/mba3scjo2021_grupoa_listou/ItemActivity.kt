@@ -7,5 +7,9 @@ class ItemActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_item)
+
+        val actionBar = supportActionBar
+        actionBar!!.title = "Item"
+        actionBar.setDisplayHomeAsUpEnabled(true)
     }
 }
