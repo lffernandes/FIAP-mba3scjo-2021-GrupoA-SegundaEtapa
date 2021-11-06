@@ -1,5 +1,6 @@
 package br.com.fiap.mba3scjo2021_grupoa_listou
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -27,6 +28,10 @@ class MinhasListas : AppCompatActivity() {
         actionBar!!.title = "Minhas Listas"
         actionBar.setDisplayHomeAsUpEnabled(true)
 
+        fab.setOnClickListener {
+            val intent = Intent(this, NewEditListaActivity::class.java)
+            startActivity(intent);
+        }
 
     }
 

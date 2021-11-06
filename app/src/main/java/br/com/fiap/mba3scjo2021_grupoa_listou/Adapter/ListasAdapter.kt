@@ -43,7 +43,17 @@ public class ListasAdapter(private var c:Context, private val listas: List<Lista
     override fun getItemCount(): Int = listas.size
 
 
-    inner class MyViewHolder(val v: ItemListasBinding) : RecyclerView.ViewHolder(v.root) /*{
+    inner class MyViewHolder(val v: ItemListasBinding) : RecyclerView.ViewHolder(v.root) {
+
+        init {
+            v.root.setOnClickListener{
+                val position: Int = adapterPosition
+
+                Toast.makeText(v.root.context,"$position",Toast.LENGTH_SHORT).show()
+            }
+        }
+    }
+    /*{
         val nomeLista: TextView = itemview.findViewById(R.id.nomeLista)
         val dtcompra: TextView = itemview.findViewById(R.id.dtCompra)
         val repetirlista: TextView = itemview.findViewById(R.id.repetirLista)

@@ -17,6 +17,6 @@ public interface RetrofitService {
     ): Response<ListaResponse>
 
     @POST("/user/lista")
-    suspend fun uploadLista (@Header("Authorization") @Body lista:ListaCompra) : Response<ListaCompra>
+    suspend fun uploadLista (@Body lista:ListaCompra) : Response<ListaCompra>
 
 }

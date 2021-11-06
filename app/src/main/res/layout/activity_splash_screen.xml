@@ -13,12 +13,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@+id/text2_logo"
+        android:layout_marginTop="10dp"
         android:text="Listou"
+        android:gravity="center"
         android:textAlignment="center"
+        android:textColor="@android:color/white"
         android:textSize="40sp"
         android:textStyle="bold"
-        android:layout_marginTop="10dp"
-        android:textColor="@android:color/white"
+
         />
 
     <TextView
@@ -26,13 +28,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@+id/img_logo"
-        android:text="Compra inteligente"
-        android:textAlignment="center"
-        android:textSize="30sp"
-        android:textStyle="bold"
         android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="Compra inteligente"
+
+        android:textAlignment="center"
         android:textColor="@android:color/white"
-        />
+        android:textSize="30sp"
+        android:textStyle="bold" />
 
   <ImageView
       android:id="@+id/img_logo"
