@@ -18,10 +18,8 @@ class NewEditListaActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_new_edit_lista)
-        retService = ApiFactory
-            .getInstance()
-            .create(RetrofitService::class.java)
-        uploadLista()
+       /* retService = ApiFactory.buildService(RetrofitService::class.java)
+        uploadLista()*/
 
     }
 

@@ -8,8 +8,8 @@ import retrofit2.http.*
 
 public interface RetrofitService {
 
-    @GET("user/listas")
-     fun getListas() : Call<MutableList<ListaCompra>>
+    @GET("/listas/Luiz")
+     fun getListas() : Call<List<ListaCompra>>
 
     @GET("lista/{listaId}")
     suspend fun getListaById(
