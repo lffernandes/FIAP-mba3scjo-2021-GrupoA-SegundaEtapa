@@ -1,5 +1,6 @@
 package br.com.fiap.mba3scjo2021_grupoa_listou
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
@@ -49,9 +50,15 @@ class MinhasListas() : AppCompatActivity(), ListasAdapter.ListaClickListener {
         recyclerView.addItemDecoration(DividerItemDecoration(this, DividerItemDecoration.VERTICAL))
         recyclerView.adapter = ListasAdapter(listMinhasListas(listasData), this@MinhasListas)
 
+        val actionBar = supportActionBar
+        actionBar!!.title = "Minhas Listas"
+        actionBar.setDisplayHomeAsUpEnabled(true)
 
+        fab.setOnClickListener {
+            val intent = Intent(this, NewEditListaActivity::class.java)
+            startActivity(intent);
+        }
     }
-
 }
 
 suspend fun getListas(user: String): LiveData<ArrayList<ListaCompra>> {
