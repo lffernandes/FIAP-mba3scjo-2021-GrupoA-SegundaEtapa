@@ -2,6 +2,7 @@ package br.com.fiap.mba3scjo2021_grupoa_listou.Services
 
 import br.com.fiap.mba3scjo2021_grupoa_listou.models.ListaCompra
 import br.com.fiap.mba3scjo2021_grupoa_listou.models.ListaResponse
+import br.com.fiap.mba3scjo2021_grupoa_listou.models.UserListou
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -17,7 +18,10 @@ public interface RetrofitService {
         @Path("listaId") ListaId : Int
     ): Response<ListaResponse>
 
-    @POST("/user/lista")
+    @POST("user/lista")
     suspend fun uploadLista (@Body lista:ListaCompra) : Response<ListaCompra>
+
+    @POST("login")
+    fun login (@Body userListou: UserListou) : Call<Boolean>
 
 }

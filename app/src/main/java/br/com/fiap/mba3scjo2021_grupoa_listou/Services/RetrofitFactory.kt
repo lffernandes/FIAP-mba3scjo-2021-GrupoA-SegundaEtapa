@@ -12,7 +12,7 @@ object ApiFactory{
 
         private val retrofit = Retrofit.Builder()
                     .baseUrl(URL)
-                    .client(client)
+            //.client(client)
                     .addConverterFactory(GsonConverterFactory.create())
                     .build()
 

@@ -1,28 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fillViewport="true"
     android:background="@drawable/gradient_background"
+    android:fillViewport="true"
     tools:context=".HomeActivity">
 
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="169dp"
+        android:layout_height="168dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="-30dp"
+        android:baselineAligned="false"
+        android:elevation="1dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/logo" />
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="130dp"
+        android:id="@+id/linearLayout2"
+        android:layout_width="413dp"
+        android:layout_height="406dp"
         android:background="@drawable/shape_bg_login"
         android:gravity="center"
         android:orientation="vertical"
-        android:paddingTop="40dp">
+        android:paddingTop="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
 
         <GridLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_width="349dp"
+            android:layout_height="346dp"
             android:layout_gravity="center_horizontal"
             android:columnCount="2"
             android:columnOrderPreserved="false"
@@ -45,9 +60,10 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:layout_width="60dp"
-                        android:layout_height="60dp"
-                        android:layout_marginTop="18dp"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="15dp"
+                        android:contentDescription="Icon minha lista"
                         android:src="@drawable/list_notebook_icon" />
 
                     <TextView
@@ -76,9 +92,9 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:layout_width="60dp"
-                        android:layout_height="60dp"
-                        android:layout_marginTop="18dp"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="15dp"
                         android:src="@drawable/office_icon" />
 
                     <TextView
@@ -107,9 +123,9 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:layout_width="60dp"
-                        android:layout_height="60dp"
-                        android:layout_marginTop="18dp"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="15dp"
                         android:src="@drawable/page_security" />
 
                     <TextView
@@ -138,9 +154,9 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:layout_width="65dp"
-                        android:layout_height="65dp"
-                        android:layout_marginTop="18dp"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="15dp"
                         android:src="@drawable/exit_logout_open_out_icon" />
 
                     <TextView
@@ -157,4 +173,36 @@
 
     </LinearLayout>
 
-</LinearLayout>
+    <TextView
+        android:textSize="32dp"
+        android:id="@+id/ola"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        android:text="@string/saudacao_nome"
+        android:textColor="@color/white"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/view2"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:elevation="12dp"
+        app:cardCornerRadius="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:scaleType="centerCrop"
+            android:src="@tools:sample/avatars" />
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
