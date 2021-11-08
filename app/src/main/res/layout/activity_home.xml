@@ -9,18 +9,11 @@
     tools:context=".HomeActivity">
 
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="142dp"
-        android:layout_height="174dp"
-        android:baselineAligned="false"
-        android:elevation="1"
-        app:srcCompat="@drawable/logo" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="130dp"
         android:background="@drawable/shape_bg_login"
         android:gravity="center"
         android:orientation="vertical"

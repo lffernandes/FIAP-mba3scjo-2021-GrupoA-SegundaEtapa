@@ -16,11 +16,11 @@ class ListaActivity : AppCompatActivity() {
         var listaIsRecorrente = listaData.getStringExtra("isRecorrente")
         var listaRecorrencia = listaData.getStringExtra("recorrencia")
         var listaOrcamento = listaData.getStringExtra("orcamento")
-        nomeLista.text = listaDescricao
+        descricao.text = listaDescricao
         dtCompra.text = listaDtCompra
-        repetirLista.text = listaIsRecorrente
-        periodoLista.text = listaRecorrencia
-        ttDisponivel.text = listaOrcamento
+        recorrente.text = listaIsRecorrente
+        recorrencia.text = listaRecorrencia
+        orcamento.text = listaOrcamento
 
         val actionBar = supportActionBar
         actionBar!!.title = listaDescricao

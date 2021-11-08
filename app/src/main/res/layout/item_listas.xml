@@ -27,7 +27,13 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/nomeLista"
+                    android:id="@+id/id"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="invisible"/>
+
+                <TextView
+                    android:id="@+id/descricao"
                     android:layout_width="363dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
@@ -47,17 +53,17 @@
                     android:textColor="@color/textoListas" />
 
                 <TextView
-                    android:id="@+id/repetirLista"
+                    android:id="@+id/recorrente"
                     android:layout_width="362dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="17dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginEnd="333dp"
-                    android:text="@{isListaCompra.isRecorrente}"
+                    android:text="@{isListaCompra.recorrente}"
                     android:textColor="@color/textoListas" />
 
                 <TextView
-                    android:id="@+id/PeriodoLista"
+                    android:id="@+id/recorrencia"
                     android:layout_width="360dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="19dp"
@@ -67,7 +73,7 @@
                     android:textColor="@color/textoListas" />
 
                 <TextView
-                    android:id="@+id/ttDisponivel"
+                    android:id="@+id/orcamento"
                     android:layout_width="361dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="19dp"

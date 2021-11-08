@@ -14,5 +14,10 @@ class HomeActivity : AppCompatActivity() {
             val intent = Intent(this, MinhasListas::class.java)
             startActivity(intent);
         }
+
+        card_sair.setOnClickListener {
+            finish();
+            System.exit(0);
+        }
     }
 }

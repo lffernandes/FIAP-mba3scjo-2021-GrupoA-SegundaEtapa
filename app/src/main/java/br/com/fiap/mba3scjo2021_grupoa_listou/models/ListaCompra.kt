@@ -6,66 +6,51 @@ import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 
 
-data class ListaCompra(
+class ListaCompra{
+    constructor(
+        id: Int?,
+        descricao: String?,
+        dtCompra: String?,
+        recorrente: String?,
+        recorrencia: String?,
+        orcamento: String?,
+        itens: List<Item>?
+    ) {
+        this.id = id
+        this.descricao = descricao
+        this.dtCompra = dtCompra
+        this.recorrente = recorrente
+        this.recorrencia = recorrencia
+        this.orcamento = orcamento
+        this.itens = itens
+    }
+
     @SerializedName("id")
     @Expose
-    var id: Int?,
+    var id: Int? = null
 
     @SerializedName("descricao")
     @Expose
-    var descricao: String?,
+    var descricao: String? = null
 
-    @SerializedName("dt_compra")
+    @SerializedName("dtCompra")
     @Expose
-    var dtCompra: String?,
+    var dtCompra: String? = null
 
-    @SerializedName("is_recorrente")
+    @SerializedName("recorrente")
     @Expose
-    var isRecorrente: String?,
+    var recorrente: String? = null
 
     @SerializedName("recorrencia")
     @Expose
-    var recorrencia: String?,
+    var recorrencia: String? = null
 
     @SerializedName("orcamento")
     @Expose
-    var orcamento: String?,
+    var orcamento: String? = null
 
     @SerializedName("itens")
     @Expose
-    var itens: List<Item>?,
-) : Parcelable{
-    constructor(parcel: Parcel) : this(
-        parcel.readValue(Int::class.java.classLoader) as? Int,
-        parcel.readString(),
-        parcel.readString(),
-        parcel.readString(),
-        parcel.readString(),
-        parcel.readString(),
-        TODO("itens")) {
-    }
-
-    override fun writeToParcel(parcel: Parcel, flags: Int) {
-        parcel.writeValue(id)
-        parcel.writeString(descricao)
-        parcel.writeString(dtCompra)
-        parcel.writeString(isRecorrente)
-        parcel.writeString(recorrencia)
-        parcel.writeString(orcamento)
-    }
-
-    override fun describeContents(): Int {
-        return 0
-    }
-
-    companion object CREATOR : Parcelable.Creator<ListaCompra> {
-        override fun createFromParcel(parcel: Parcel): ListaCompra {
-            return ListaCompra(parcel)
-        }
-
-        override fun newArray(size: Int): Array<ListaCompra?> {
-            return arrayOfNulls(size)
-        }
-    }
+    var itens: List<Item>? = null
 
 }
