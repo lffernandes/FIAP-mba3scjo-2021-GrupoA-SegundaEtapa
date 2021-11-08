@@ -43,8 +43,10 @@ class MainActivity : AppCompatActivity() {
                     etPassword.requestFocus()
                 }
             }
-
-        var ur :UserRepository = UserRepository()
+            val intent = Intent(this@MainActivity, HomeActivity::class.java)
+            startActivity(intent)
+            finish()
+        /*var ur :UserRepository = UserRepository()
         if (ur.login(username, password) == true) {
             val intent = Intent(this@MainActivity, HomeActivity::class.java)
             startActivity(intent)
@@ -52,7 +54,7 @@ class MainActivity : AppCompatActivity() {
         } else {
             Toast.makeText(applicationContext,"Não conseguimos efetuar seu login, tente novamente!",Toast.LENGTH_SHORT).show()
         }
-
+*/
         }
     }
 }
