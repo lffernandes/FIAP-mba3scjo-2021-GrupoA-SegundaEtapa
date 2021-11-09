@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import br.com.fiap.mba3scjo2021_grupoa_listou.Adapter.ListaAdapter
 import br.com.fiap.mba3scjo2021_grupoa_listou.models.ItemCompra
 import br.com.fiap.mba3scjo2021_grupoa_listou.models.ListaCompra
+import kotlinx.android.synthetic.main.activity_lista.view.*
 
 class ListaActivity() : AppCompatActivity() {
 
@@ -25,33 +26,30 @@ class ListaActivity() : AppCompatActivity() {
         val listaRecorrencia: String = intent.getStringExtra("recorrencia") as String
         val listaOrcamento: String = intent.getStringExtra("orcamento") as String
 
-        findViewById<TextView>(R.id.id).apply{
-            text = listaId
-        }
-        findViewById<TextView>(R.id.descricao).apply{
-            text = listaDescricao
-        }
+        var id = findViewById<TextView>(R.id.id)
+        id.text = listaId
 
-        findViewById<TextView>(R.id.dtCompra).apply{
-            text = listaDtCompra
-        }
-        findViewById<TextView>(R.id.recorrente).apply{
-            text = listaRecorrente
-        }
-        findViewById<TextView>(R.id.recorrencia).apply{
-            text = listaRecorrencia
-        }
-        findViewById<TextView>(R.id.orcamento).apply{
-            text = listaOrcamento
-        }
+        var descricao = findViewById<TextView>(R.id.descricao)
+        descricao.text = listaDescricao
 
-/*
+        var dtCompra = findViewById<TextView>(R.id.dtCompra)
+        dtCompra.text = listaDtCompra
+
+        var recorrente = findViewById<TextView>(R.id.recorrente)
+        recorrente.text = listaRecorrente
+
+        var recorrencia = findViewById<TextView>(R.id.recorrencia)
+        recorrencia.text = listaRecorrencia
+
+        var orcamento = findViewById<TextView>(R.id.orcamento)
+        orcamento.text = listaOrcamento
+
         var recyclerView: RecyclerView = findViewById(R.id.rv_item_list)
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.addItemDecoration(DividerItemDecoration(this, DividerItemDecoration.VERTICAL))
-        recyclerView.adapter = ListaAdapter(mlista.itens as ArrayList<ItemCompra>)*/
+        recyclerView.adapter = ListaAdapter(mlista.itens as ArrayList<ItemCompra>)
 
-        /*      val actionBar = supportActionBar
+          /*    val actionBar = supportActionBar
               actionBar!!.title = "Minhas Listas"
               actionBar.setDisplayHomeAsUpEnabled(true)
 

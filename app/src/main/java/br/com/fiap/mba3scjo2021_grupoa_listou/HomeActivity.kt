@@ -14,7 +14,7 @@ class HomeActivity : AppCompatActivity() {
         val saudacao = intent.getStringExtra("username")
 
         val ola = findViewById<TextView>(R.id.ola)
-        ola.text = "Olá, ${saudacao?.uppercase()}"
+        ola.text = "Olá, ${saudacao?.uppercase()}."
 
         card_lista.setOnClickListener {
             val intent = Intent(this, MinhasListas::class.java)

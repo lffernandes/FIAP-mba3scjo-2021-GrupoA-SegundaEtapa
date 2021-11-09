@@ -43,8 +43,9 @@ class MinhasListas() : AppCompatActivity(), ListasAdapter.ListaClickListener {
         intent.putExtra("recorrente",  listasData.get(position).recorrente,)
         intent.putExtra("recorrencia",  listasData.get(position).recorrencia,)
         intent.putExtra("orcamento", listasData.get(position).orcamento,)
-        intent.putExtra("lista", listasData.get(position));
-        startActivity(intent);
+        intent.putExtra("lista", listasData.get(position))
+        startActivity(intent)
+        finish()
 
         /*  alertDialog.setTitle(listasData.get(position).descricao)
         alertDialog.setMessage(listasData.get(position).dtCompra)

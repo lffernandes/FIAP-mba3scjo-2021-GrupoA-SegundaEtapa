@@ -37,6 +37,7 @@ class ListaAdapter(private val myitens: ArrayList<ItemCompra>) :
         return holder.bind(myitens, position)
     }
 
+
     override fun getItemCount(): Int {
         return myitens.size
     }
