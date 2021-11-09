@@ -26,7 +26,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:height="0dp"
-                    android:weight="0dp"
+                    android:width="0dp"
                     android:visibility="invisible"/>
 
                 <GridLayout
