@@ -4,20 +4,18 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import androidx.lifecycle.LiveData
 import androidx.recyclerview.widget.RecyclerView
 import br.com.fiap.mba3scjo2021_grupoa_listou.R
 import br.com.fiap.mba3scjo2021_grupoa_listou.models.ListaCompra
-import br.com.fiap.mba3scjo2021_grupoa_listou.models.ListasResponse
 
-class ListasAdapter(private val myListas: ArrayList<ListaCompra>, var itemClick: ListaClickListener) :
+class ListasAdapter(private val myListas: ArrayList<ListaCompra>, var itemClick: ListaClickListener?) :
     RecyclerView.Adapter<ListasAdapter.MyViewHolder>() {
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val view = LayoutInflater.from(parent!!.context)
             .inflate(R.layout.item_listas, parent, false)
-        return MyViewHolder(view, itemClick)
+        return MyViewHolder(view, itemClick!!)
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {

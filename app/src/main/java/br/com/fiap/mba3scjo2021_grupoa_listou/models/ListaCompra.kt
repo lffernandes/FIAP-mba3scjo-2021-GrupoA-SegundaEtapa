@@ -1,12 +1,11 @@
 package br.com.fiap.mba3scjo2021_grupoa_listou.models
 
-import android.os.Parcel
-import android.os.Parcelable
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
+import java.io.Serializable
 
 
-class ListaCompra{
+class ListaCompra : Serializable{
     constructor(
         id: Int?,
         descricao: String?,
@@ -14,7 +13,7 @@ class ListaCompra{
         recorrente: String?,
         recorrencia: String?,
         orcamento: String?,
-        itens: List<Item>?
+        itens: List<ItemCompra>?
     ) {
         this.id = id
         this.descricao = descricao
@@ -51,6 +50,6 @@ class ListaCompra{
 
     @SerializedName("itens")
     @Expose
-    var itens: List<Item>? = null
+    var itens: List<ItemCompra>? = null
 
 }

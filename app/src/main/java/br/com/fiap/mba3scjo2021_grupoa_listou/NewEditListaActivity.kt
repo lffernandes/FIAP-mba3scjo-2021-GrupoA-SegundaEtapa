@@ -1,14 +1,11 @@
 package br.com.fiap.mba3scjo2021_grupoa_listou
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.liveData
-import br.com.fiap.mba3scjo2021_grupoa_listou.Services.ApiFactory
 import br.com.fiap.mba3scjo2021_grupoa_listou.Services.RetrofitService
 import br.com.fiap.mba3scjo2021_grupoa_listou.models.ListaCompra
-import kotlinx.android.synthetic.main.activity_minhas_listas.*
 import retrofit2.Response
 
 class NewEditListaActivity : AppCompatActivity() {

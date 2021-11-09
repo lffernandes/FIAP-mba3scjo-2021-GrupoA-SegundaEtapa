@@ -1,47 +1,30 @@
 package br.com.fiap.mba3scjo2021_grupoa_listou.models
 
-import android.os.Parcel
-import android.os.Parcelable
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
+import java.io.Serializable
 
-data class Item (
+class ItemCompra : Serializable {
+    constructor(id: Int, nome: String?, quantidade: Int?, precoPretendidoUnitario: String?) {
+        this.id = id
+        this.nome = nome
+        this.quantidade = quantidade
+        this.precoPretendidoUnitario = precoPretendidoUnitario
+    }
+
+    @SerializedName("id")
+    @Expose
+    var id: Int? = null
+
     @SerializedName("nome")
     @Expose
-    var nome: String?,
+    var nome: String? = null
 
     @SerializedName("quantidade")
     @Expose
-    var quantidade: Int?,
+    var quantidade: Int?  = null
 
     @SerializedName("preco_pretendido_unitario")
     @Expose
-    var precoPretendidoUnitario: String?
-) :Parcelable{
-    constructor(parcel: Parcel) : this(
-        parcel.readString(),
-        parcel.readValue(Int::class.java.classLoader) as? Int,
-        parcel.readString()) {
+    var precoPretendidoUnitario: String?  = null
     }
-
-    override fun writeToParcel(parcel: Parcel, flags: Int) {
-        parcel.writeString(nome)
-        parcel.writeValue(quantidade)
-        parcel.writeString(precoPretendidoUnitario)
-    }
-
-    override fun describeContents(): Int {
-        return 0
-    }
-
-    companion object CREATOR : Parcelable.Creator<Item> {
-        override fun createFromParcel(parcel: Parcel): Item {
-            return Item(parcel)
-        }
-
-        override fun newArray(size: Int): Array<Item?> {
-            return arrayOfNulls(size)
-        }
-    }
-
-}

@@ -44,6 +44,7 @@ class MainActivity : AppCompatActivity() {
                 }
             }
             val intent = Intent(this@MainActivity, HomeActivity::class.java)
+            intent.putExtra("username",username)
             startActivity(intent)
             finish()
         /*var ur :UserRepository = UserRepository()

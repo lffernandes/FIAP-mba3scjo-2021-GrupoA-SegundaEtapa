@@ -15,11 +15,7 @@
         android:name=".NewEditListaActivity"
         android:exported="true" />
 
-        <activity
-            android:name=".ItemActivity"
-            android:exported="false"
-            android:parentActivityName=".ListaActivity"
-            android:theme="@style/Theme.Mba3scjo2021GrupoAListou_actionBar" />
+
         <activity
             android:name=".ListaActivity"
             android:exported="false"
