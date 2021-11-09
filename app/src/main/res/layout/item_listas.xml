@@ -13,11 +13,11 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="10dp"
         android:elevation="10dp"
         app:cardCornerRadius="10dp"
         app:cardUseCompatPadding="true"
-        card_view:cardCornerRadius="30dp"
-        android:layout_margin="10dp">
+        card_view:cardCornerRadius="30dp">
 
         <GridLayout
             android:layout_width="match_parent"
@@ -157,6 +157,13 @@
                     android:paddingEnd="10dp"
                     android:text="@{isListaCompra.orcamento}"
                     android:textColor="@color/textoListas" />
+
+                <TextView
+                    android:id="@+id/total_lista"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="0dp"
+                    android:visibility="invisible" />
             </GridLayout>
 
             <TextView
@@ -167,7 +174,7 @@
                 android:gravity="center"
                 android:text="Detalhes"
                 android:textColor="@color/white"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
         </GridLayout>
     </androidx.cardview.widget.CardView>
 </layout>

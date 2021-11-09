@@ -69,7 +69,7 @@ class MinhasListas() : AppCompatActivity(), ListasAdapter.ListaClickListener {
         recyclerView.adapter = ListasAdapter(listMinhasListas(), this@MinhasListas)
 
         val actionBar = supportActionBar
-        actionBar!!.title = "Minhas Listas"
+        actionBar!!.title = "Home"
         actionBar.setDisplayHomeAsUpEnabled(true)
 
         fab.setOnClickListener {
@@ -147,10 +147,10 @@ class MinhasListas() : AppCompatActivity(), ListasAdapter.ListaClickListener {
     }
 
     fun meusItens(): ArrayList<ItemCompra> {
-        myItens.add(ItemCompra(1, "Leite", 5, "5"))
-        myItens.add(ItemCompra(2, "Sabão em pó", 1, "7"))
-        myItens.add(ItemCompra(3, "Cerveja", 12, "4"))
-        myItens.add(ItemCompra(4, "Frango 1kg", 1, "20"))
+        myItens.add(ItemCompra(1, "Leite", 5, "5".toFloat()))
+        myItens.add(ItemCompra(2, "Sabão em pó", 1, "7".toFloat()))
+        myItens.add(ItemCompra(3, "Cerveja", 12, "4".toFloat()))
+        myItens.add(ItemCompra(4, "Frango 1kg", 1, "20".toFloat()))
         return myItens as ArrayList<ItemCompra>
     }
 }

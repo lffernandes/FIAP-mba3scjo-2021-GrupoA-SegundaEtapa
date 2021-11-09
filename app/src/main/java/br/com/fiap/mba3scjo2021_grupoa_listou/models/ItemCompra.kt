@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName
 import java.io.Serializable
 
 class ItemCompra : Serializable {
-    constructor(id: Int, nome: String?, quantidade: Int?, precoPretendidoUnitario: String?) {
+    constructor(id: Int, nome: String?, quantidade: Int?, precoPretendidoUnitario: Float?) {
         this.id = id
         this.nome = nome
         this.quantidade = quantidade
@@ -26,5 +26,5 @@ class ItemCompra : Serializable {
 
     @SerializedName("preco_pretendido_unitario")
     @Expose
-    var precoPretendidoUnitario: String?  = null
+    var precoPretendidoUnitario: Float?  = null
     }
