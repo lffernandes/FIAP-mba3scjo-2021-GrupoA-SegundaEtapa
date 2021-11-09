@@ -20,4 +20,16 @@
     <string name="data_compra_label">Data Compra</string>
     <string name="descricao_label">Descrição</string>
     <string name="minhas_listas_label">Minhas Listas</string>
+    <string name="nova_lista_label">Nova Lista</string>
+    <string name="repetir_label">Repetir</string>
+    <string name="periodo_label">Período</string>
+
+    <string-array name="periodo_array">
+        <item>Semanal</item>
+        <item>Mensal</item>
+        <item>Bimestral</item>
+        <item>Trimestral</item>
+        <item>Semestral</item>
+        <item>Anual</item>
+    </string-array>
 </resources>
