@@ -23,6 +23,8 @@
     <string name="nova_lista_label">Nova Lista</string>
     <string name="repetir_label">Repetir</string>
     <string name="periodo_label">Período</string>
+    <string name="nome_label">Nome</string>
+    <string name="quantidade_label">Quantidade</string>
 
     <string-array name="periodo_array">
         <item>Semanal</item>
