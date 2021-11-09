@@ -15,4 +15,9 @@
     <string name="periodo">Período</string>
     <string name="salvar">SALVAR</string>
     <string name="saudacao_nome">Olá, Grupo A.</string>
+    <string name="recorrencia_label">Recorrência</string>
+    <string name="is_recorrente_label">Recorrente</string>
+    <string name="data_compra_label">Data Compra</string>
+    <string name="descricao_label">Descrição</string>
+    <string name="minhas_listas_label">Minhas Listas</string>
 </resources>

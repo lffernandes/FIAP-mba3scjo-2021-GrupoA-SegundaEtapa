@@ -71,7 +71,8 @@ class MinhasListas() : AppCompatActivity(), ListasAdapter.ListaClickListener {
 
         var recyclerView: RecyclerView = findViewById(R.id.rv_compra_list)
         recyclerView.layoutManager = LinearLayoutManager(this)
-        recyclerView.addItemDecoration(DividerItemDecoration(this, DividerItemDecoration.VERTICAL))
+
+        recyclerView.addItemDecoration(DividerItemDecoration(this, 0))
         recyclerView.adapter = ListasAdapter(listMinhasListas(), this@MinhasListas)
 
         val actionBar = supportActionBar
