@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import br.com.fiap.mba3scjo2021_grupoa_listou.R
 import br.com.fiap.mba3scjo2021_grupoa_listou.models.ListaCompra
 
-class ListasAdapter(private val myListas: ArrayList<ListaCompra>, var itemClick: ListaClickListener?) :
+class ListasAdapter(private val myListas: ArrayList<ListaCompra>, var itemClick: ListaClickListener) :
     RecyclerView.Adapter<ListasAdapter.MyViewHolder>() {
 
 
@@ -16,14 +16,15 @@ class ListasAdapter(private val myListas: ArrayList<ListaCompra>, var itemClick:
         val view = LayoutInflater.from(parent!!.context)
             .inflate(R.layout.item_listas, parent, false)
         return MyViewHolder(view, itemClick!!)
+        return MyViewHolder(view, itemClick!!)
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        return holder.bind(myListas,position)
+        return holder.bind(myListas[position],itemClick)
     }
 
     interface ListaClickListener {
-        fun getLista(position: Int)
+        fun onItemClick(lista: ListaCompra, position: Int)
     }
 
     override fun getItemCount(): Int {
@@ -33,6 +34,7 @@ class ListasAdapter(private val myListas: ArrayList<ListaCompra>, var itemClick:
 
     class MyViewHolder(itemView: View, var itemClick: ListaClickListener) : RecyclerView.ViewHolder(itemView) {
 
+
         var id: TextView = itemView.findViewById(R.id.id)
         var descricao: TextView = itemView.findViewById(R.id.descricao)
         var dtcompra: TextView = itemView.findViewById(R.id.dtCompra)
@@ -40,14 +42,14 @@ class ListasAdapter(private val myListas: ArrayList<ListaCompra>, var itemClick:
         var recorrencia: TextView = itemView.findViewById(R.id.recorrencia)
         var orcamento: TextView = itemView.findViewById(R.id.orcamento)
 
-        fun bind(myListas: ArrayList<ListaCompra>?, position: Int) {
-            descricao.text = myListas!!.get(position).descricao
-            dtcompra.text = myListas!!.get(position).dtCompra
-            recorrente.text =myListas!!.get(position).recorrente.toString()
-            recorrencia.text =myListas!!.get(position).recorrencia
-            orcamento.text =myListas!!.get(position).orcamento
+        fun bind(myLista: ListaCompra?, position: ListaClickListener) {
+            descricao.text = myLista!!.descricao
+            dtcompra.text = myLista!!.dtCompra
+            recorrente.text =myLista!!.recorrente.toString()
+            recorrencia.text =myLista!!.recorrencia
+            orcamento.text =myLista!!.orcamento
             itemView.setOnClickListener(View.OnClickListener {
-                itemClick.getLista(absoluteAdapterPosition)
+                position.onItemClick(myLista, absoluteAdapterPosition)
             })
         }
     }
