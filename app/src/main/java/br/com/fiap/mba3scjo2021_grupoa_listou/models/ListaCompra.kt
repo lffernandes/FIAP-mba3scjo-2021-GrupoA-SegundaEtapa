@@ -10,7 +10,7 @@ class ListaCompra : Serializable{
         id: Int?,
         descricao: String?,
         dtCompra: String?,
-        recorrente: String?,
+        recorrente: Boolean?,
         recorrencia: String?,
         orcamento: String?,
         itens: List<ItemCompra>?
@@ -38,7 +38,7 @@ class ListaCompra : Serializable{
 
     @SerializedName("recorrente")
     @Expose
-    var recorrente: String? = null
+    var recorrente: Boolean? = null
 
     @SerializedName("recorrencia")
     @Expose

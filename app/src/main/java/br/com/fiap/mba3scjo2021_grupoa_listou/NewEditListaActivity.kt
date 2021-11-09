@@ -38,7 +38,7 @@ class NewEditListaActivity : AppCompatActivity(), AdapterView.OnItemSelectedList
         var listaData = intent
         var listaDescricao = listaData.getStringExtra("descricao")
         var listaDtCompra = listaData.getStringExtra("dtCompra")
-        var listaIsRecorrente = listaData.getStringExtra("isRecorrente")
+        var listaIsRecorrente = listaData.getBooleanExtra("isRecorrente",false)
         var listaRecorrencia = listaData.getStringExtra("recorrencia")
         var listaOrcamento = listaData.getStringExtra("orcamento")
 
