@@ -14,8 +14,8 @@
 
         <LinearLayout
             android:id="@+id/linearLayout4"
-            android:layout_width="413dp"
-            android:layout_height="451dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:background="@drawable/shape_bg_login"
             android:gravity="center"
             android:orientation="vertical"
@@ -40,7 +40,7 @@
 
             <TextView
                 android:id="@+id/text2_login"
-                android:layout_width="218dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_above="@+id/img_logo"
                 android:layout_gravity="left"

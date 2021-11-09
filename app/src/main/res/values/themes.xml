@@ -27,13 +27,15 @@
         <item name="colorSecondaryVariant">#2855AE</item>
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
-        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <item name="android:statusBarColor" tools:targetApi="l">@android:color/transparent</item>
+        <item name="windowActionBarOverlay">true</item>
         <!-- Customize your theme here. -->
 
         <item name="windowActionBar">true</item>
         <item name="windowNoTitle">false</item>
 
         <item name="colorAccent">#7292CF</item>
+
     </style>
 
 </resources>

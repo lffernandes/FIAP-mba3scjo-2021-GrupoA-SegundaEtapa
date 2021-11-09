@@ -17,13 +17,13 @@ class ListaAdapter(private val myitens: ArrayList<ItemCompra>) :
         var id: TextView = itemView.findViewById(R.id.id)
         var nomeItem: TextView = itemView.findViewById(R.id.nomeItem)
         var qtdItem: TextView = itemView.findViewById(R.id.qtdItem)
-        var precoItem: TextView = itemView.findViewById(R.id.precoItem)
+        //var precoItem: TextView = itemView.findViewById(R.id.precoItem)
 
         fun bind(myitens: ArrayList<ItemCompra>?, position: Int) {
             id.text = myitens!!.get(position).id.toString()
             nomeItem.text = myitens!!.get(position).nome
             qtdItem.text = myitens!!.get(position).quantidade.toString()
-            precoItem.text = myitens!!.get(position).precoPretendidoUnitario
+          //  precoItem.text = myitens!!.get(position).precoPretendidoUnitario
         }
     }
 
