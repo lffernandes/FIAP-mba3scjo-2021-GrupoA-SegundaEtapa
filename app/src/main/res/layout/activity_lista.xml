@@ -20,15 +20,11 @@
         android:orientation="vertical"
         tools:context=".ListaActivity">
 
-
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <LinearLayout
+        <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="80dp"
+
                 android:background="@drawable/shape_bg_login"
                 android:gravity="center"
                 android:orientation="vertical"
@@ -192,14 +188,14 @@
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/rv_item_list"
-                    android:layout_width="403dp"
-                    android:layout_height="374dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginBottom="10dp"
                     android:layout_weight="1"
-                    tools:listitem="@layout/item_compra" />
-
-
+                    tools:listitem="@layout/item_compra"
+                    android:clipToPadding="false"/>
             </LinearLayout>
-        </ScrollView>
+
     </LinearLayout>
 </layout>
 
