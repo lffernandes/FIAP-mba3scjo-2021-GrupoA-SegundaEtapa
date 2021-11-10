@@ -19,6 +19,13 @@
             android:parentActivityName=".MinhasListas"
             android:theme="@style/Theme.Mba3scjo2021GrupoAListou_actionBar"/>
 
+        <activity
+            android:name=".NewItemActivity"
+            android:exported="true"
+            android:parentActivityName=".ListaActivity"
+            android:label="Lista"
+            android:theme="@style/Theme.Mba3scjo2021GrupoAListou_actionBar"/>
+
          <activity
             android:name=".ListaActivity"
             android:exported="false"

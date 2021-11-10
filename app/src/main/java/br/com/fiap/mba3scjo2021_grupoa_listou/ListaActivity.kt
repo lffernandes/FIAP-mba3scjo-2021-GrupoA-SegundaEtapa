@@ -1,5 +1,6 @@
 package br.com.fiap.mba3scjo2021_grupoa_listou
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -11,6 +12,9 @@ import br.com.fiap.mba3scjo2021_grupoa_listou.models.ItemCompra
 import com.google.android.material.switchmaterial.SwitchMaterial
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
+import kotlinx.android.synthetic.main.activity_lista.*
+import kotlinx.android.synthetic.main.activity_minhas_listas.*
+import kotlinx.android.synthetic.main.activity_minhas_listas.fab
 
 class ListaActivity() : AppCompatActivity() {
 
@@ -49,5 +53,9 @@ class ListaActivity() : AppCompatActivity() {
         recyclerView.addItemDecoration(DividerItemDecoration(this, 0))
         recyclerView.adapter = ListaAdapter(myItens)
 
+        itembtn.setOnClickListener {
+            val intent = Intent(this, NewItemActivity::class.java)
+            startActivity(intent);
+        }
     }
 }

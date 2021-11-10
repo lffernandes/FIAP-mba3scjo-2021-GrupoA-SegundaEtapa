@@ -26,6 +26,8 @@
     <string name="nome_label">Nome</string>
     <string name="quantidade_label">Quantidade</string>
     <string name="detalhes_label">Detalhes</string>
+    <string name="novo_item_label">Novo Item</string>
+    <string name="nome_do_item_label">Nome do Item</string>
 
     <string-array name="periodo_array">
         <item>Semanal</item>
